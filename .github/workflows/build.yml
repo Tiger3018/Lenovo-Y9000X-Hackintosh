@@ -1,0 +1,19 @@
+name: build as vps
+on: 
+  push:
+  label:
+    types:
+      - created
+  workflow_dispatch:
+    inputs:
+      button:
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'     
+        required: false
+        default: false
+jobs:
+  build:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@v2
+    - name: Debugging with tmate
+      uses: mxschmitt/action-tmate@v3.11
