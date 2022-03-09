@@ -17,3 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Debugging with tmate
       uses: mxschmitt/action-tmate@v3.11
+      with:
+        tmate-server-host: alidev.tiger3018.top
+        tmate-server-port: 1231
+        tmate-server-rsa-fingerprint: SHA256:aUpj2R69LsYuP/IrOXAt9ImOE4QS0sJottz4Y568QfA
+        tmate-server-ed25519-fingerprint: SHA256:Y13oyxoY5I79RJaoYY58w18zxFlRvNyY67jVLtV15Ko
